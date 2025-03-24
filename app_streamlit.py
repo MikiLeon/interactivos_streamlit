@@ -1,0 +1,38 @@
+#Paso 1: Instalar y Cargar Librerías
+import pandas as pd
+import plotly_express as px
+import streamlit as st
+
+
+pd.options.display.max_columns= None
+
+tabs = pd.ExcelFile("C:\\Users\\miiki\\Desktop\\DATA_SCIENCE\\APRENDIZAJE_PYTHON\\venvs\\fundacio_a_p\\inputs\\Indicadors.xlsx").sheet_names 
+print(tabs)
+
+# Cargar el CSV (asegúrate de cambiar 'datos.csv' por el nombre de tu archivo)
+DATA = ("C:\\Users\\miiki\\Desktop\\DATA_SCIENCE\\APRENDIZAJE_PYTHON\\venvs\\fundacio_a_p\\inputs\\Indicadors.xlsx")
+locations=pd.read_excel(DATA, sheet_name= 'mapa_localitzacions')
+
+# Ver las primeras filas para comprobar que se cargó bien
+locations.head(10)
+
+# Separamos la latitud y longitud en columnas diferentes.
+# Suponiendo que la columna se llama "coordenadas" y está en formato "lat, lon"
+locations[['lon', 'lat']] = locations['Coordenades\n(longitud, latitud)'].str.split(',', expand=True)
+
+# Convertimos latitud y longitud a valores numéricos
+locations['lat'] = locations['lat'].astype(float)
+locations['lon'] =locations['lon'].astype(float)
+
+locations['Xeringues'] = locations['Xeringues'].fillna(0)
+
+
+
+# Datos con latitud/longitud y valores
+
+fig = px.scatter_map(locations, lat = 'lat', lon = 'lon', size = 'Xeringues',
+                        zoom = 4, map_style = 'open-street-map')
+                        
+fig.show()
+
+st.plotly_chart(fig)
