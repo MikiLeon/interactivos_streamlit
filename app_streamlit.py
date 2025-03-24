@@ -6,8 +6,6 @@ import streamlit as st
 
 pd.options.display.max_columns= None
 
-# tabs = pd.ExcelFile("C:\\Users\\miiki\\Desktop\\DATA_SCIENCE\\APRENDIZAJE_PYTHON\\venvs\\fundacio_a_p\\inputs\\Indicadors.xlsx").sheet_names 
-# print(tabs)
 
 # Cargar el CSV (asegúrate de cambiar 'datos.csv' por el nombre de tu archivo)
 DATA = ("https://raw.githubusercontent.com/MikiLeon/interactivos_streamlit/refs/heads/main/mapa.csv")
