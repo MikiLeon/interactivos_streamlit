@@ -9,7 +9,7 @@ pd.options.display.max_columns= None
 
 # Cargar el CSV (asegúrate de cambiar 'datos.csv' por el nombre de tu archivo)
 DATA = ("https://raw.githubusercontent.com/MikiLeon/interactivos_streamlit/refs/heads/main/mapa.csv")
-locations=pd.read_excel(DATA) #sheet_name= 'mapa_localitzacions'
+locations=pd.read_csv(DATA)
 
 # Ver las primeras filas para comprobar que se cargó bien
 locations.head(10)
