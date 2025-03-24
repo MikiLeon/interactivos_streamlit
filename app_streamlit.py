@@ -2,7 +2,6 @@
 import pandas as pd
 import plotly.express as px
 import streamlit as st
-import openpyxl
 
 
 pd.options.display.max_columns= None
