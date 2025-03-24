@@ -8,7 +8,7 @@ import openpyxl
 pd.options.display.max_columns= None
 
 # Cargar el CSV (asegúrate de cambiar 'datos.csv' por el nombre de tu archivo)
-DATA = ('C:\\Users\\miiki\\Desktop\\DATA_SCIENCE\\APRENDIZAJE_PYTHON\\venvs\\fundacio_a_p\\inputs\\Indicadors_mapa.csv')
+DATA = ('https://raw.githubusercontent.com/MikiLeon/interactivos_streamlit/refs/heads/main/Indicadors_mapa.csv')
 locations=pd.read_csv(DATA)
 
 # Separamos la latitud y longitud en columnas diferentes.
