@@ -30,7 +30,7 @@ fig = px.scatter_map(gr_locations,
                         size = 'Cantidad',
                         color= 'Tipo',
                         zoom = 4,
-                        map_style = 'carto-positron',
+                        map_style = 'open-street-map',
                         color_discrete_map={"Xeringues": "#3357FF", "RC:Injectat": "#FF5733"
                         })
 
