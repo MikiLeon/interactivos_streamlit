@@ -31,8 +31,8 @@ fig = px.scatter_map(gr_locations,
                         color= 'Tipo',
                         zoom = 4,
                         map_style = 'carto-positron',
-                        color_discrete_map={"Xeringues": "#3357FF", "RC:Injectat": "#FF5733"
-                        })
+                        color_discrete_sequence=px.colors.qualitative.Plotly
+                        )
 
 fig.update_layout(
     title="Mapa de xeringues i restes de consum",
@@ -41,6 +41,7 @@ fig.update_layout(
     height=800,  # Altura personalizada
     width=1200 # anchura personalizada
 )
+
 
                         
 fig.show()
