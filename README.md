@@ -1,1 +1,3 @@
-# interactivos_streamlit
+# MAPA DE JERINGUILLAS Y RESTOS DE CONSUMO INTERACTIVO (streamlit)
+
+Explicar el mapa y el proceso...
