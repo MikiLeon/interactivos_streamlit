@@ -7,7 +7,7 @@ import streamlit as st
 pd.options.display.max_columns= None
 
 # Cargar el CSV (asegúrate de cambiar 'datos.csv' por el nombre de tu archivo)
-DATA = ('https://raw.githubusercontent.com/MikiLeon/interactivos_streamlit/refs/heads/main/Indicadors_mapa.csv')
+DATA = ('https://docs.google.com/spreadsheets/d/e/2PACX-1vT4GG7D9PKkctFY9qO1j-P0hmqeiRiGH99kJ18jrg1un3Kv66jpsPHCACItBW-srw/pub?gid=407726589&single=true&output=csv')
 locations=pd.read_csv(DATA)
 
 # Separamos la latitud y longitud en columnas diferentes.
