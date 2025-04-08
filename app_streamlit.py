@@ -35,7 +35,7 @@ fig = px.scatter_map(gr_locations,
                         )
 
 fig.update_layout(
-    title=""Mapa de Jeringuillas y Restos de Consumo (Intravenoso / Fumado)",
+    title="Mapa de Jeringuillas y Restos de Consumo (Intravenoso / Fumado)",
     title_x=0.5,  # Centrado del título
     title_font=dict(size=24, color="black", family="Verdana"),
     height=800,  # Altura personalizada
