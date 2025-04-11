@@ -28,6 +28,8 @@ gr_locations.head(10)
 fig = px.scatter_map(gr_locations,
                       lat = 'lat', lon = 'lon',
                         size = 'Cantidad',
+                        hover_name= 'Barrio',
+                        hover_data= ['Cantidad'],
                         color= 'Tipo',
                         zoom = 4,
                         map_style = 'carto-positron',
@@ -35,7 +37,7 @@ fig = px.scatter_map(gr_locations,
                         )
 
 fig.update_layout(
-    title="Mapa de Jeringuillas y Restos de Consumo (Intravenoso / Fumado)",
+    title="Mapa de Jeringuillas y Restos de Consumo",
     title_x=0.5,  # Centrado del título
     title_font=dict(size=24, color="black", family="Verdana"),
     height=800,  # Altura personalizada
