@@ -19,7 +19,7 @@ locations['lat'] = locations['lat'].astype(float)
 locations['lon'] =locations['lon'].astype(float)
 
 #Agrupamos por la columna de coordenadas para obtener la suma
-gr_locations =locations.groupby(['lon','lat','Tipo'],as_index=False)['Cantidad'].sum()
+gr_locations =locations.groupby(['Barrio','lon','lat','Tipo'],as_index=False)['Cantidad'].sum()
 gr_locations.head(10)
 
 
