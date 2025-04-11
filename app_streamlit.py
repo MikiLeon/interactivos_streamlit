@@ -10,16 +10,12 @@ pd.options.display.max_columns= None
 DATA = ('https://docs.google.com/spreadsheets/d/e/2PACX-1vT4GG7D9PKkctFY9qO1j-P0hmqeiRiGH99kJ18jrg1un3Kv66jpsPHCACItBW-srw/pub?gid=407726589&single=true&output=csv')
 locations=pd.read_csv(DATA)
 
-# Separamos la latitud y longitud en columnas diferentes.
-# Suponiendo que la columna se llama "coordenadas" y está en formato "lat, lon"
-locations[['lon', 'lat']] = locations['Coordenades\n(longitud, latitud)'].str.split(',', expand=True)
-
 # Convertimos latitud y longitud a valores numéricos
 locations['lat'] = locations['lat'].astype(float)
 locations['lon'] =locations['lon'].astype(float)
 
 #Agrupamos por la columna de coordenadas para obtener la suma
-gr_locations =locations.groupby(['Barrio','lon','lat','Tipo'],as_index=False)['Cantidad'].sum()
+gr_locations =locations.groupby(['Barrio','lat','lon','Tipo'],as_index=False)['Cantidad'].sum()
 gr_locations.head(10)
 
 
